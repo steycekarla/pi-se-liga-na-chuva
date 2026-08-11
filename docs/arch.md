@@ -1,0 +1,10 @@
+- docs # pasta de documentos 
+     - arch.md # arquivo de arquitetura do sistema 
+- SLNC # pasta do pwa
+  - nome_modules # pasta de pacotes node 
+  - public 
+  - src
+  - index.html
+  - vite.config.js
+- README.md # visão geral do app 
+- .gitignore # arquivos que são para ser ingnorados 
