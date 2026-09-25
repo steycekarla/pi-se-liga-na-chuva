@@ -1,18 +1,14 @@
-export default function header{
+import '.index.css';
+
+export default function Header(){
     return(
-           <>
-           <header>
-            
-            
-
+             <header>
+            <div id='appLogo'>
+              <img src="/favicon.svg" alt="Logo" />  
+              <p> SLNC </p>  
+              <button className="logout">Logout</button>     
+            </div>
            </header>
-           
-           
-           
-           
-           
-           </>
-
     )
         
     
