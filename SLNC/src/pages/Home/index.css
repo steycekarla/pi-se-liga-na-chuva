@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #071b3f;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 55px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.saudacao {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.saudacao strong {
+    font-size: 14px;
+}
+
+.loc {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    margin-top: 5px;
+}
+
+.loc svg {
+    color: #00aaff;
+    font-size: 13px;
+}
+
+.loc p {
+    font-size: 8px;
+}
+
+.header-icons {
+    flex-direction: row;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   BANNER DO TEMPO
+========================= */
+
+.banner-tempo {
+    position: relative;
+
+    margin: 0 8px;
+    padding: 8px;
+
+    height: 80px;
+
+    border-radius: 7px;
+
+    background: linear-gradient(
+        135deg,
+        #214f94,
+        #163b75
+    );
+}
+
+.temperatura {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.temperatura > strong {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.temperatura p {
+    font-size: 8px;
+}
+
+.temperatura small {
+    display: block;
+
+    font-size: 6px;
+
+    margin-top: 3px;
+
+    color: #d3def0;
+}
+
+.cloud {
+    position: absolute;
+
+    right: 9px;
+    top: 8px;
+
+    font-size: 40px;
+
+    color: #d7e3f2;
+}
+
+.info-tempo {
+    position: absolute;
+
+    bottom: 6px;
+    left: 8px;
+
+    display: flex;
+    gap: 10px;
+
+    font-size: 6px;
+
+    color: #d4def0;
+}
+
+
+/* =========================
+   ALERTA
+========================= */
+
+.banner-alerta {
+    margin: 7px 8px;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 5px;
+
+    border-radius: 6px;
+
+    background-color: #987300;
+}
+
+.alerta-icone {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffd21c;
+
+    border-radius: 4px;
+
+    color: #17233c;
+}
+
+.alerta-icone svg {
+    font-size: 20px;
+}
+
+.banner-alerta small {
+    display: block;
+
+    font-size: 5px;
+
+    color: #ffe994;
+}
+
+.banner-alerta strong {
+    display: block;
+
+    font-size: 8px;
+
+    margin-top: 1px;
+}
+
+.banner-alerta p {
+    font-size: 5px;
+
+    margin-top: 2px;
+
+    color: #fff3c7;
+}
+
+
+/* =========================
+   PRÓXIMAS HORAS
+========================= */
+
+.proximas-horas {
+    margin: 6px 9px 4px;
+}
+
+.proximas-horas p {
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.horas {
+    display: flex;
+
+    gap: 3px;
+
+    margin: 0 8px;
+}
+
+.hora {
+    flex: 1;
+
+    height: 46px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+
+    background-color: #12396f;
+}
+
+.hora p {
+    font-size: 6px;
+
+    color: #aebfdd;
+}
+
+.hora svg {
+    font-size: 15px;
+
+    margin: 2px 0;
+
+    color: #d4e0ef;
+}
+
+.hora strong {
+    font-size: 8px;
+}
+
+
+/* =========================
+   AÇÕES RÁPIDAS
+========================= */
+
+.acoes-titulo {
+    margin: 7px 9px 4px;
+}
+
+.acoes-titulo p {
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.acoes {
+    display: flex;
+
+    gap: 4px;
+
+    margin: 0 8px;
+}
+
+.acao {
+    flex: 1;
+
+    height: 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+
+    color: white;
+}
+
+.acao svg {
+    font-size: 17px;
+}
+
+.acao p {
+    font-size: 6px;
+
+    margin-top: 2px;
+}
+
+.blue {
+    background-color: #0757c5;
+}
+
+.orange {
+    background-color: #f07819;
+}
+
+.red {
+    background-color: #d71919;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #061630;
+
+    border-top: 1px solid #193762;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #7184a5;
+}
+
+.nav-item span {
+    font-size: 15px;
+}
+
+.nav-item p {
+    font-size: 6px;
+}
+
+.nav-item.active {
+    color: #ffd21c;
+}
