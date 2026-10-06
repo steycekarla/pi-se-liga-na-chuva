@@ -15,3 +15,8 @@ npm create @vite-pwa/ pwa@latest
 * passo8: Escolher prompt for update como comportamento
 * passo9: Optar por não escolher as últimas configurações do create (Estudar)
 
+
+## commit
+* git add . (cuidado em qual lugar você faz isso)
+* git commit -m "titulo-do-commit"
+* git push
