@@ -18,5 +18,5 @@ npm create @vite-pwa/ pwa@latest
 
 ## commit
 * git add . (cuidado em qual lugar você faz isso)
-* git commit -m "titulo-do-commit"
+* git commit -m "titulo-do-commit" (tentar manter o padrão)
 * git push
