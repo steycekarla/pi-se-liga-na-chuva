@@ -226,13 +226,13 @@ export default function Home({ user }) {
                     </div>
 
 
-                    <div className="acao red">
+                    <div className="acao red" onClick={() => window.location.href = "/inicio"}>
 
                         <MdEmergency />
 
                         <p>
                             Emergência
-                        </p>
+1                        </p>
 
                     </div>
 

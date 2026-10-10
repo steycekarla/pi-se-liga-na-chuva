@@ -5,11 +5,13 @@ import './index.css'
 export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = "/home";
+      window.location.href = "/inicio";
     }, 3000);
-
+    
     return () => clearTimeout(timer);
   }, []);
+
+  
 
   return (
     <>

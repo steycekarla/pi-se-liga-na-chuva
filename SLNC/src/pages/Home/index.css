@@ -48,7 +48,7 @@ header {
 }
 
 .loc svg {
-    color: #00aaff;
+    color: rgb(0, 170, 255);
     font-size: 13px;
 }
 
@@ -235,7 +235,11 @@ header {
 
     border-radius: 4px;
 
-    background-color: #12396f;
+   background: linear-gradient(
+        135deg,
+        #214f94,
+        #163b75
+    );
 }
 
 .hora p {
