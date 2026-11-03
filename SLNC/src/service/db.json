@@ -1,0 +1,147 @@
+
+{
+  "projeto": "Se Liga na Chuva",
+  "versao": "1.0",
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ana Paula",
+      "email": "ana@gmail.com",
+      "perfil": "morador",
+      "localizacao": {
+        "cidade": "Recife",
+        "estado": "PE",
+        "bairro": "A definir",
+        "cep": "A definir"
+      },
+      "receber_notificacoes": true,
+      "data_cadastro": "2026-11-03T18:00:00"
+    }
+  ],
+  "clima": [
+    {
+      "id": 1,
+      "cidade": "Recife",
+      "estado": "PE",
+      "temperatura": 27,
+      "descricao": "Chuva moderada",
+      "probabilidade_chuva": 80,
+      "ultima_atualizacao": "2026-11-03T18:00:00",
+      "fonte": "API meteorológica"
+    }
+  ],
+  "alertas": [
+    {
+      "id": 1,
+      "titulo": "Alerta de chuva intensa",
+      "tipo": "chuva_intensa",
+      "nivel": "alto",
+      "mensagem": "Acompanhe os avisos oficiais e evite áreas de risco.",
+      "localizacao": {
+        "cidade": "Recife",
+        "estado": "PE",
+        "bairro": "A definir"
+      },
+      "data_publicacao": "2026-11-03T18:00:00",
+      "fonte": "Defesa Civil",
+      "ativo": true
+    }
+  ],
+  "areas_de_risco": [
+    {
+      "id": 1,
+      "nome": "Área de risco cadastrada",
+      "localizacao": {
+        "cidade": "Recife",
+        "estado": "PE",
+        "bairro": "A definir",
+        "latitude": null,
+        "longitude": null
+      },
+      "tipo_de_risco": "deslizamento",
+      "nivel": "alto",
+      "descricao": "Área que necessita de monitoramento.",
+      "fonte": "Órgão oficial",
+      "ultima_atualizacao": "2026-11-03T18:00:00"
+    }
+  ],
+  "ocorrencias": [
+    {
+      "id": 1,
+      "usuario_id": 1,
+      "tipo": "alagamento",
+      "descricao": "Relato de ponto de alagamento.",
+      "localizacao": {
+        "cidade": "Recife",
+        "estado": "PE",
+        "bairro": null,
+        "latitude": null,
+        "longitude": null
+      },
+      "foto": null,
+      "data_registro": "2026-11-03T18:00:00",
+      "status": "pendente"
+    }
+  ],
+  "pontos_de_alagamento": [
+    {
+      "id": 1,
+      "local": "Ponto de alagamento cadastrado",
+      "cidade": "Recife",
+      "estado": "PE",
+      "latitude": null,
+      "longitude": null,
+      "situacao": "alagamento",
+      "nivel": "alto",
+      "data_atualizacao": "2026-11-03T18:00:00",
+      "fonte": "Órgão oficial"
+    }
+  ],
+  "locais_de_acolhimento": [
+    {
+      "id": 1,
+      "nome": "Local de acolhimento",
+      "endereco": "A definir",
+      "cidade": "Recife",
+      "estado": "PE",
+      "latitude": null,
+      "longitude": null,
+      "situacao": "a_confirmar",
+      "capacidade": null,
+      "fonte": "Prefeitura do Recife"
+    }
+  ],
+  "notificacoes": [
+    {
+      "id": 1,
+      "usuario_id": 1,
+      "titulo": "Novo alerta de chuva",
+      "mensagem": "Foi publicado um novo alerta para sua região.",
+      "visualizada": false,
+      "data_envio": "2026-11-03T18:00:00"
+    }
+  ],
+  "orientacoes": [
+    {
+      "id": 1,
+      "titulo": "Prevenção durante chuvas intensas",
+      "categoria": "prevencao",
+      "recomendacoes": [
+        "Acompanhar os alertas oficiais.",
+        "Evitar atravessar ruas alagadas.",
+        "Não se aproximar de áreas com risco de deslizamento.",
+        "Seguir as orientações da Defesa Civil."
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Cuidados durante alagamentos",
+      "categoria": "seguranca",
+      "recomendacoes": [
+        "Procurar um local seguro.",
+        "Evitar contato com água de alagamentos.",
+        "Acompanhar informações dos órgãos oficiais."
+      ]
+    }
+  ]
+}

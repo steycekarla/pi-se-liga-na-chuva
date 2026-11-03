@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,24 +6,21 @@
 }
 
 body {
-    background-color: #071b3f;
+    background-color: #101e40;
     color: white;
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    padding-bottom: 55px;
+    padding-bottom: 48px;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     width: 100%;
-    padding: 10px;
-
+    padding: 35px 15px 10px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .column {
@@ -31,281 +29,250 @@ header {
 }
 
 .saudacao {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .saudacao strong {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .loc {
     display: flex;
     align-items: center;
-    gap: 2px;
-
-    margin-top: 5px;
+    gap: 5px;
+    margin-top: 7px;
 }
 
 .loc svg {
-    color: rgb(0, 170, 255);
-    font-size: 13px;
+    color: #00aaff;
+    font-size: 16px;
 }
 
 .loc p {
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .header-icons {
+    display: flex;
     flex-direction: row;
-    gap: 8px;
-    font-size: 14px;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
 }
 
-
-/* =========================
-   BANNER DO TEMPO
-========================= */
+/* BANNER DO TEMPO */
 
 .banner-tempo {
     position: relative;
-
-    margin: 0 8px;
+    margin: 0 17px;
     padding: 8px;
-
-    height: 80px;
-
-    border-radius: 7px;
+    height: 132px;
+    border-radius: 16px;
 
     background: linear-gradient(
         135deg,
         #214f94,
-        #163b75
+        #12366f
     );
 }
 
 .temperatura {
     display: flex;
     align-items: center;
-
     gap: 5px;
 }
 
 .temperatura > strong {
-    font-size: 35px;
+    font-size: 56px;
     font-weight: 400;
+    line-height: 60px;
 }
 
 .temperatura p {
-    font-size: 8px;
+    font-size: 14px;
 }
 
 .temperatura small {
     display: block;
-
-    font-size: 6px;
-
+    font-size: 10px;
     margin-top: 3px;
-
     color: #d3def0;
 }
 
 .cloud {
     position: absolute;
-
-    right: 9px;
+    right: 10px;
     top: 8px;
-
-    font-size: 40px;
-
-    color: #d7e3f2;
+    font-size: 65px;
+    color: #dce7f2;
 }
 
 .info-tempo {
     position: absolute;
-
-    bottom: 6px;
+    bottom: 10px;
     left: 8px;
 
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px 22px;
 
-    font-size: 6px;
-
+    font-size: 10px;
     color: #d4def0;
 }
 
-
-/* =========================
-   ALERTA
-========================= */
+/* ALERTA */
 
 .banner-alerta {
-    margin: 7px 8px;
-
-    min-height: 48px;
+    margin: 9px 18px;
+    min-height: 74px;
 
     display: flex;
     align-items: center;
+    gap: 10px;
 
-    gap: 7px;
+    padding: 7px 10px;
+    border-radius: 8px;
 
-    padding: 5px;
-
-    border-radius: 6px;
-
-    background-color: #987300;
+    background: linear-gradient(
+        90deg,
+        #806500 0%,
+        #806500 30%,
+        #a88700 30%,
+        #a88700 100%
+    );
 }
 
 .alerta-icone {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 60px;
+    flex-shrink: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: #ffd21c;
-
-    border-radius: 4px;
+    border-radius: 5px;
 
     color: #17233c;
 }
 
 .alerta-icone svg {
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .banner-alerta small {
     display: block;
-
-    font-size: 5px;
-
+    font-size: 8px;
     color: #ffe994;
 }
 
 .banner-alerta strong {
     display: block;
-
-    font-size: 8px;
-
-    margin-top: 1px;
+    font-size: 16px;
+    margin-top: 3px;
+    color: #ffdc31;
 }
 
 .banner-alerta p {
-    font-size: 5px;
-
-    margin-top: 2px;
-
+    font-size: 8px;
+    line-height: 12px;
+    margin-top: 4px;
     color: #fff3c7;
 }
 
-
-/* =========================
-   PRÓXIMAS HORAS
-========================= */
+/* PRÓXIMAS HORAS */
 
 .proximas-horas {
-    margin: 6px 9px 4px;
+    margin: 12px 18px 5px;
 }
 
 .proximas-horas p {
-    font-size: 8px;
+    font-size: 12px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .horas {
     display: flex;
-
-    gap: 3px;
-
-    margin: 0 8px;
+    gap: 2px;
+    margin: 0 18px;
 }
 
 .hora {
     flex: 1;
-
-    height: 46px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 4px;
-
-   background: linear-gradient(
-        135deg,
-        #214f94,
-        #163b75
-    );
-}
-
-.hora p {
-    font-size: 6px;
-
-    color: #aebfdd;
-}
-
-.hora svg {
-    font-size: 15px;
-
-    margin: 2px 0;
-
-    color: #d4e0ef;
-}
-
-.hora strong {
-    font-size: 8px;
-}
-
-
-/* =========================
-   AÇÕES RÁPIDAS
-========================= */
-
-.acoes-titulo {
-    margin: 7px 9px 4px;
-}
-
-.acoes-titulo p {
-    font-size: 8px;
-    font-weight: bold;
-}
-
-.acoes {
-    display: flex;
-
-    gap: 4px;
-
-    margin: 0 8px;
-}
-
-.acao {
-    flex: 1;
-
-    height: 42px;
+    height: 60px;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
     border-radius: 5px;
 
+    background: linear-gradient(
+        135deg,
+        #214f94,
+        #163b75
+    );
+
+    border-right: 1px solid #42669b;
+}
+
+.hora p {
+    font-size: 10px;
+    color: #aebfdd;
+    margin-bottom: 2px;
+}
+
+.hora svg {
+    font-size: 22px;
+    margin: 2px 0;
+    color: #d4e0ef;
+}
+
+.hora strong {
+    font-size: 10px;
+}
+
+/* AÇÕES RÁPIDAS */
+
+.acoes-titulo {
+    margin: 12px 18px 5px;
+}
+
+.acoes-titulo p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.acoes {
+    display: flex;
+    gap: 6px;
+    margin: 0 16px;
+}
+
+.acao {
+    flex: 1;
+    height: 63px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
     color: white;
 }
 
 .acao svg {
-    font-size: 17px;
+    font-size: 23px;
 }
 
 .acao p {
-    font-size: 6px;
-
-    margin-top: 2px;
+    font-size: 10px;
+    margin-top: 4px;
 }
 
 .blue {
@@ -320,47 +287,68 @@ header {
     background-color: #d71919;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
     position: fixed;
-
     bottom: 0;
     left: 0;
 
     width: 100%;
-    height: 45px;
+    height: 48px;
 
     display: flex;
-
     justify-content: space-around;
     align-items: center;
 
     background-color: #061630;
-
     border-top: 1px solid #193762;
+
+    z-index: 100;
 }
 
 .nav-item {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+    justify-content: center;
 
     color: #7184a5;
 }
 
 .nav-item span {
-    font-size: 15px;
+    font-size: 22px;
 }
 
 .nav-item p {
-    font-size: 6px;
+    font-size: 10px;
+    margin-top: 1px;
 }
 
 .nav-item.active {
     color: #ffd21c;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 300px) {
+    .banner-tempo {
+        margin: 0 17px;
+    }
+
+    .temperatura > strong {
+        font-size: 54px;
+    }
+
+    .cloud {
+        font-size: 58px;
+    }
+
+    .info-tempo {
+        gap: 7px 15px;
+    }
+
+    .banner-alerta p {
+        font-size: 7px;
+    }
 }

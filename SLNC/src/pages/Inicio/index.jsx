@@ -1,3 +1,4 @@
+
 import {
     MdCloud,
     MdFlashOn
@@ -11,8 +12,8 @@ export default function Inicio() {
 
             {/* NUVEM SUPERIOR */}
             <div className="nuvem nuvem-topo">
-                <MdCloud />
-                <MdFlashOn />
+                <MdCloud className="icone-nuvem" />
+                <MdFlashOn className="icone-raio" />
             </div>
 
             {/* LOGO */}
@@ -21,13 +22,13 @@ export default function Inicio() {
                 <p>Na chuva</p>
             </div>
 
-            {/* NUVEM LATERAL */}
+            {/* NUVEM INFERIOR */}
             <div className="nuvem nuvem-baixo">
-                <MdCloud />
-                <MdFlashOn />
+                <MdCloud className="icone-nuvem" />
+                <MdFlashOn className="icone-raio" />
             </div>
 
-            {/* TEXTO */}
+            {/* MENSAGEM */}
             <div className="mensagem">
                 <h2>Bem vindo!</h2>
 
@@ -38,7 +39,10 @@ export default function Inicio() {
             </div>
 
             {/* BOTÃO */}
-            <button className="botao-entrar" onClick={() => window.location.href = "/home"}>
+            <button
+                className="botao-entrar"
+                onClick={() => window.location.href = "/home"}
+            >
                 Entrar
             </button>
 

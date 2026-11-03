@@ -1,44 +1,126 @@
+
+/* RESET GERAL */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.inicio {
+html,
+body,
+#root {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+body {
     position: relative;
+    font-family: Arial, sans-serif;
+    background: #001638;
+}
+
+/* TELA PRINCIPAL */
+
+.inicio {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+
     overflow: hidden;
 
-    background-color: #022955;
+    background: radial-gradient(
+        ellipse at 50% 48%,
+        #06447a 0%,
+        #023263 50%,
+        #001638 100%
+    );
 
     color: white;
     font-family: Arial, sans-serif;
+}
+
+/* ILUMINAÇÃO */
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 112, 190, 0.12),
+        transparent 70%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ONDA INFERIOR */
+
+.inicio::after {
+    content: "";
+    position: absolute;
+
+    width: 140%;
+    height: 180px;
+
+    left: -20%;
+    bottom: 75px;
+
+    background: rgba(0, 20, 55, 0.35);
+
+    border-radius: 50% 50% 0 0;
+    transform: rotate(5deg);
+
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* LOGO */
 
 .logo {
     position: absolute;
-    top: 105px;
+
+    top: 26%;
     left: 50%;
+
     transform: translateX(-50%);
+
+    width: 100%;
     text-align: center;
+
     z-index: 5;
 }
 
 .logo h1 {
-    font-size: 32px;
+    font-family: Impact, "Arial Narrow", sans-serif;
+
+    font-size: clamp(45px, 15vw, 60px);
     font-weight: 900;
-    letter-spacing: -1px;
+
+    letter-spacing: -2px;
+    line-height: 1;
+
+    color: white;
 }
 
 .logo p {
-    color: #ffd902;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: -2px;
+    color: #ffd900;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-top: 2px;
+    margin-left: 65px;
 }
 
 /* NUVENS */
@@ -46,36 +128,50 @@
 .nuvem {
     position: absolute;
     color: white;
-    z-index: 2;
+    z-index: 3;
+
+    filter: drop-shadow(
+        0 3px 6px rgba(255,255,255,0.25)
+    );
 }
 
-.nuvem svg:first-child {
-    font-size: 75px;
+.icone-nuvem {
+    font-size: 95px;
 }
 
-.nuvem svg:last-child {
+.icone-raio {
     position: absolute;
+
     color: #ffd400;
-    font-size: 30px;
-    bottom: -20px;
-    left: 25px;
+    font-size: 35px;
+
+    bottom: -22px;
+    left: 28px;
+
+    filter: drop-shadow(
+        0 0 5px rgba(255,217,0,0.5)
+    );
 }
 
-/* NUVEM DE CIMA */
+/* NUVEM SUPERIOR */
 
 .nuvem-topo {
-    top: 45px;
-    left: -25px;
+    top: 10%;
+    left: -35px;
+
+    transform: rotate(-8deg);
 }
 
-/* NUVEM DE BAIXO */
+/* NUVEM INFERIOR */
 
 .nuvem-baixo {
     right: -35px;
-    top: 285px;
+    top: 42%;
+
+    transform: rotate(8deg);
 }
 
-.nuvem-baixo svg:last-child {
+.nuvem-baixo .icone-raio {
     left: 35px;
 }
 
@@ -83,40 +179,98 @@
 
 .mensagem {
     position: absolute;
-    left: 20px;
-    bottom: 72px;
+
+    left: 18px;
+    bottom: 75px;
+
     z-index: 5;
 }
 
 .mensagem h2 {
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 400;
+
     margin-bottom: 12px;
+    color: white;
 }
 
 .mensagem p {
-    width: 190px;
-    font-size: 11px;
-    line-height: 15px;
-    color: #dce6f5;
+    width: 220px;
+
+    font-size: 12px;
+    line-height: 17px;
+
+    color: #e0eaf7;
 }
 
-/* BOTÃO */
+/* BOTÃO ENTRAR */
 
 .botao-entrar {
     position: absolute;
-    bottom: 22px;
+
+    bottom: 20px;
     left: 50%;
+
     transform: translateX(-50%);
 
-    width: 110px;
-    height: 32px;
+    width: 130px;
+    height: 38px;
 
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
 
-    background-color: #ffd900;
+    background: #ffd900;
     color: #17233c;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
+
+    cursor: pointer;
+    z-index: 5;
+}
+
+.botao-entrar:hover {
+    background: #ffe34d;
+}
+
+/* TELAS BAIXAS */
+
+@media (max-height: 650px) {
+
+    .logo {
+        top: 22%;
+    }
+
+    .nuvem-baixo {
+        top: 38%;
+    }
+
+    .mensagem {
+        bottom: 65px;
+    }
+
+    .botao-entrar {
+        bottom: 15px;
+    }
+}
+
+/* TELAS ESTREITAS */
+
+@media (max-width: 300px) {
+
+    .logo h1 {
+        font-size: 45px;
+    }
+
+    .logo p {
+        font-size: 19px;
+    }
+
+    .nuvem .icone-nuvem {
+        font-size: 80px;
+    }
+
+    .mensagem {
+        left: 15px;
+    }
 }
