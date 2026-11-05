@@ -1,0 +1,49 @@
+
+.location-art {
+  width: 190px;
+  height: 190px;
+  position: relative;
+  margin: 15px 0;
+  border-radius: 50%;
+  background: #103c70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2764a0;
+}
+
+.location-circle {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background: #ffd21c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #14213d;
+  font-size: 65px;
+}
+
+.location-target {
+  position: absolute;
+  right: 5px;
+  bottom: 20px;
+  font-size: 35px;
+  color: #54c8ff;
+}
+
+.location-status {
+  max-width: 280px;
+  margin-top: 12px;
+  color: #ffd21c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.text-button {
+  border: 0;
+  background: transparent;
+  color: #b9cce2;
+  margin-top: 15px;
+  font-size: 13px;
+}

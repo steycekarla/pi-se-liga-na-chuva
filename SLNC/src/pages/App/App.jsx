@@ -1,37 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import appLogo from '/favicon.svg'
-import PWABadge from '../../PWABadge.jsx'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import { useState } from "react";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="SLNC logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>SLNC</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <PWABadge />
-    </>
-  )
+import Previsao from "../previsao/previsao";
+import Riscos from "../riscos/riscos";
+import Localizacao from "../localizacao/localizacao";
+import ConfiguracaoLocal from "../configuracaolocal/configuracaolocal";
+import Login from "../login/login";
+import Cadastro from "../cadastro/cadastro";
+
+import "./App.css";
+
+export default function App() {
+  const [tela, setTela] = useState("previsao");
+
+  const ordem = [
+    "previsao",
+    "riscos",
+    "localizacao",
+    "configuracao",
+    "login",
+    "cadastro"
+  ];
+
+  function avancar() {
+    const atual = ordem.indexOf(tela);
+
+    if (atual < ordem.length - 1) {
+      setTela(ordem[atual + 1]);
+    }
+  }
+
+  function voltar() {
+    const atual = ordem.indexOf(tela);
+
+    if (atual > 0) {
+      setTela(ordem[atual - 1]);
+    }
+  }
+
+  switch (tela) {
+    case "previsao":
+      return <Previsao onNext={avancar} />;
+
+    case "riscos":
+      return <Riscos onNext={avancar} onBack={voltar} />;
+
+    case "localizacao":
+      return <Localizacao onNext={avancar} onBack={voltar} />;
+
+    case "configuracao":
+      return <ConfiguracaoLocal onNext={avancar} onBack={voltar} />;
+
+    case "login":
+      return <Login onNext={avancar} onBack={voltar} />;
+
+    case "cadastro":
+      return <Cadastro onBack={voltar} />;
+
+    default:
+      return <Previsao onNext={avancar} />;
+  }
 }
-
-export default App

@@ -1,0 +1,121 @@
+
+.riscos-screen {
+  padding-top: 52px;
+}
+
+.riscos-screen .progress {
+  margin-bottom: 36px;
+}
+
+.riscos-screen h1 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.risk-alert {
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 6px;
+  margin: 0 0 -2px;
+  border: 1px solid #315b8d;
+  border-radius: 5px;
+  background: #102044;
+  color: #ffffff;
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+.risk-alert svg {
+  color: #ff3838;
+  font-size: 15px;
+}
+
+.risk-map {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background-color: #06458e;
+  background-image:
+    repeating-linear-gradient(
+      35deg,
+      transparent 0 16px,
+      #ffffff18 17px 18px
+    ),
+    repeating-linear-gradient(
+      -35deg,
+      transparent 0 20px,
+      #00b7ff35 21px 22px
+    );
+}
+
+.risk-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #2ab2ff70;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.risk-circle.outer {
+  width: 130px;
+  height: 130px;
+}
+
+.risk-circle.middle {
+  width: 90px;
+  height: 90px;
+  background: #ff303015;
+}
+
+.risk-circle.inner {
+  width: 55px;
+  height: 55px;
+  background: #ff303025;
+}
+
+.risk-warning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ff3434;
+  font-size: 34px;
+  transform: translate(-50%, -50%);
+}
+
+.risk-location {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #ffd000;
+  font-size: 20px;
+}
+
+.risk-waves {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  color: #48caff;
+  font-size: 24px;
+}
+
+.riscos-screen .intro-description {
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+.riscos-screen .primary-button {
+  margin-top: auto;
+}
+
+.riscos-screen .secondary-button {
+  margin-top: 8px;
+}
