@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { MdPersonAdd } from "react-icons/md";
-import "./cadastro.css";
+import "./index.css";
 
 export default function Cadastro({ onBack }) {
   const [nome, setNome] = useState("");

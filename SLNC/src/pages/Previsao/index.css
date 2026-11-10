@@ -1,0 +1,174 @@
+.tela {
+  padding-top: 52px;
+}
+
+.tela .progresso {
+  margin-bottom: 36px;
+}
+
+.tela .progresso span {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background: #6b7280;
+}
+
+.tela .progresso .ativo {
+  background: #ffd000;
+}
+
+.tela .titulo {
+  font-size: 21px;
+  margin-bottom: 27px;
+}
+
+/* Área do mapa */
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+/* Mapa */
+.mapa-linhas {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 78%;
+  height: 125px;
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 8px;
+
+  background-color: #06458e;
+
+  background-image:
+    repeating-linear-gradient(
+      35deg,
+      transparent 0 16px,
+      #ffffff18 17px 18px
+    ),
+    repeating-linear-gradient(
+      -35deg,
+      transparent 0 20px,
+      #00b7ff35 21px 22px
+    );
+}
+
+/* Círculos do mapa */
+.mapa-linhas::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid #29aaff65;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.mapa-linhas::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 85px;
+  height: 85px;
+
+  border: 1px solid #29aaff65;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* Cartão de clima */
+.cartao-clima {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  top: 0;
+
+  width: 100px;
+  height: 145px;
+
+  padding: 8px 5px;
+
+  border: 1px solid #2776bd;
+  border-radius: 8px;
+
+  background: #104b8d;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+/* Ícone da nuvem */
+.nuvem-clima {
+  color: #b9e5ff;
+  font-size: 29px;
+}
+
+/* Temperatura */
+.cartao-clima strong {
+  color: #ffffff;
+  font-size: 23px;
+  line-height: 1.1;
+  margin-top: 3px;
+}
+
+/* Texto "Chuva fraca" */
+.cartao-clima small {
+  color: #d4e5f8;
+  font-size: 7px;
+  margin-top: 7px;
+}
+
+/* Marcador de localização */
+.marcador-mapa {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  color: #ffd000;
+  font-size: 27px;
+
+  transform: translate(-50%, -50%);
+}
+
+/* Descrição */
+.tela .descricao {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.tela .botao {
+  margin-top: auto;
+
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #ffd000;
+  color: #12244d;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}

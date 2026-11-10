@@ -1,12 +1,12 @@
 
 import { useState } from "react";
 
-import Previsao from "./pages/previsao/previsao";
-import Riscos from "./pages/riscos/riscos";
-import Localizacao from "./pages/localizacao/localizacao";
-import ConfiguracaoLocal from "./pages/configuracaolocal/configuracaolocal";
-import Login from "./pages/login/login";
-import Cadastro from "./pages/cadastro/cadastro";
+import Previsao from "../pages/Previsao";
+import Riscos from "../pages/Riscos";
+import Localizacao from "../pages/Localizacao";
+import ConfiguracaoLocal from "../pages/ConfiguracaoLocal";
+import Login from "../pages/Login";
+import Cadastro from "../pages/Cadastro";
 
 function App() {
   const [tela, setTela] = useState("previsao");

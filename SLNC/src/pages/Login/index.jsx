@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { MdCloud } from "react-icons/md";
-import "./login.css";
+import "./index.css";
 
 export default function Login({ onNext, onBack }) {
   const [email, setEmail] = useState("");
@@ -65,4 +65,3 @@ export default function Login({ onNext, onBack }) {
     </section>
   );
 }
-

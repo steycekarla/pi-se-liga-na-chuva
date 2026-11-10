@@ -1,4 +1,5 @@
 import { MdCloud, MdLocationOn } from "react-icons/md";
+import "./index.css";
 
 export default function Previsao({ proxima }) {
     return (

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
-import "./configuracaolocal.css";
+import "./index.css";
 
 export default function ConfiguracaoLocal({ onNext, onBack }) {
   const [cidade, setCidade] = useState("");

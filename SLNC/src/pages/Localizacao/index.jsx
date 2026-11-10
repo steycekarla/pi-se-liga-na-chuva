@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { MdLocationOn, MdMyLocation } from "react-icons/md";
-import "./localizacao.css";
+import "./index.css";
 
 export default function Localizacao({ onNext, onBack }) {
   const [status, setStatus] = useState("");
