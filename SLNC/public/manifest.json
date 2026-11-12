@@ -1,11 +1,11 @@
 {
   "name": "SLNC",
-  "short_name": "SLNC",
+  "short_name": "se liga na chuva",
   "description": "A Progressive Web App",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#071b3f",
-  "theme_color": "#ffffff",
+  "background_color": "#083165",
+  "theme_color": "#083165",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
