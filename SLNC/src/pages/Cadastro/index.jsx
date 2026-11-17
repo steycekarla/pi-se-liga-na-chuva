@@ -1,4 +1,4 @@
-
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { MdPersonAdd } from "react-icons/md";
 import "./index.css";
@@ -7,6 +7,7 @@ export default function Cadastro({ onBack }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate = useNavigate();
 
   function cadastrar() {
     if (!nome.trim() || !email.trim() || !senha.trim()) {
@@ -61,11 +62,11 @@ export default function Cadastro({ onBack }) {
         />
       </div>
 
-      <button className="primary-button" onClick={cadastrar}>
+      <button className="primary-button" onClick={() => navigate("/login")}>
         Criar conta
       </button>
 
-      <button className="secondary-button" onClick={onBack}>
+      <button className="secondary-button" onClick={() => navigate("/login")}>
         Voltar
       </button>
     </section>

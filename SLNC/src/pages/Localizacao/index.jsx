@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { MdLocationOn, MdMyLocation } from "react-icons/md";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Localizacao({ onNext, onBack }) {
   const [status, setStatus] = useState("");
+  const navigate = useNavigate();
 
   function localizar() {
     if (!navigator.geolocation) {
@@ -49,19 +51,16 @@ export default function Localizacao({ onNext, onBack }) {
         informações sobre as condições do tempo na sua região.
       </p>
 
-      <button className="primary-button" onClick={localizar}>
+      <button className="primary-button" onClick={()=>(navigate("/configuracaolocal"))}>
         Usar minha localização
       </button>
 
       {status && <p className="location-status">{status}</p>}
 
-      <button className="secondary-button" onClick={onNext}>
-        Informar localização depois
+      <button className="secondary-button" onClick={()=>(navigate("/login"))}>
+        Agora não
       </button>
 
-      <button className="text-button" onClick={onBack}>
-        Voltar
-      </button>
     </section>
   );
 }

@@ -2,10 +2,12 @@
 import { useState } from "react";
 import { MdCloud } from "react-icons/md";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Login({ onNext, onBack }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate = useNavigate();
 
   function entrar() {
     if (!email.trim() || !senha.trim()) {
@@ -51,15 +53,15 @@ export default function Login({ onNext, onBack }) {
         />
       </div>
 
-      <button className="primary-button" onClick={entrar}>
+      <button className="primary-button" onClick={()=>(navigate("/home"))}>
         Entrar
       </button>
 
-      <button className="secondary-button" onClick={onBack}>
+      <button className="secondary-button" onClick={() => navigate("/localizacao")}>
         Voltar
       </button>
 
-      <button className="text-button" onClick={onNext}>
+      <button className="text-button" onClick={()=>(navigate("/cadastro"))}>
         Ainda não tenho cadastro
       </button>
     </section>

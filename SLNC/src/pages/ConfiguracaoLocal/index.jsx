@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ConfiguracaoLocal({ onNext, onBack }) {
   const [cidade, setCidade] = useState("");
   const [bairro, setBairro] = useState("");
   const [cep, setCep] = useState("");
+  const navigate = useNavigate();
 
   function continuar() {
     if (!cidade.trim() || !bairro.trim()) {
@@ -61,11 +63,11 @@ export default function ConfiguracaoLocal({ onNext, onBack }) {
         />
       </div>
 
-      <button className="primary-button" onClick={continuar}>
+      <button className="primary-button" onClick={() => navigate("/login")}>
         Continuar
       </button>
 
-      <button className="secondary-button" onClick={onBack}>
+      <button className="secondary-button" onClick={() => navigate("/localizacao")}>
         Voltar
       </button>
     </section>

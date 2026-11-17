@@ -9,9 +9,11 @@ import {
 } from "react-icons/md";
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 export default function Home({ user }) {
+    const navigate = useNavigate();
 
     const temps = [
         { hora: 9, temp: 26 },
@@ -19,24 +21,6 @@ export default function Home({ user }) {
         { hora: 11, temp: 27 },
         { hora: 12, temp: 27 },
         { hora: 13, temp: 28 }
-    ];
-
-    const fastacts = [
-        {
-            icone: "mdimage",
-            desc: "Reportar",
-            bgcolor: "blue"
-        },
-        {
-            icone: "mdNotifications",
-            desc: "Alertas",
-            bgcolor: "orange"
-        },
-        {
-            icone: "mdEmergency",
-            desc: "Emergência",
-            bgcolor: "red"
-        }
     ];
 
     const [username, setUsername] = useState(
@@ -226,7 +210,7 @@ export default function Home({ user }) {
                     </div>
 
 
-                    <div className="acao red" onClick={() => window.location.href = "/inicio"}>
+                    <div className="acao red" onClick={() => navigate("/inicio")}>
 
                         <MdEmergency />
 
@@ -245,27 +229,27 @@ export default function Home({ user }) {
 
             <nav className="navbar">
 
-                <div className="nav-item active">
+                <div className="nav-item active" onClick={() => navigate("/home")}>
                     <span>⌂</span>
                     <p>Início</p>
                 </div>
 
-                <div className="nav-item">
+                <div className="nav-item" onClick={() => navigate("/previsao")}>
                     <span>◉</span>
                     <p>Previsão</p>
                 </div>
 
-                <div className="nav-item">
+                <div className="nav-item" onClick={() => navigate("/localizacao")}>
                     <span>▣</span>
                     <p>Mapa</p>
                 </div>
 
-                <div className="nav-item">
+                <div className="nav-item" onClick={() => navigate("/riscos")}>
                     <span>♢</span>
                     <p>Alertas</p>
                 </div>
 
-                <div className="nav-item">
+                <div className="nav-item" onClick={() => navigate("/login")}>
                     <span>●</span>
                     <p>Perfil</p>
                 </div>

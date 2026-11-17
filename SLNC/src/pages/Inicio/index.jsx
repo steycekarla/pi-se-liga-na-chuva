@@ -3,10 +3,13 @@ import {
     MdCloud,
     MdFlashOn
 } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 import "./index.css";
 
 export default function Inicio() {
+    const navigate = useNavigate();
+
     return (
         <main className="inicio">
 
@@ -41,7 +44,7 @@ export default function Inicio() {
             {/* BOTÃO */}
             <button
                 className="botao-entrar"
-                onClick={() => window.location.href = "/home"}
+                onClick={() => navigate("/previsao")}
             >
                 Entrar
             </button>

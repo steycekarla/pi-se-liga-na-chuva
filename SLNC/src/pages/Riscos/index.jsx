@@ -1,6 +1,8 @@
 import { MdWarning } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export default function Riscos({ proxima }) {
+    const navigate = useNavigate();
     return (
         <main className="tela">
             <div className="progresso">
@@ -31,7 +33,7 @@ export default function Riscos({ proxima }) {
                 Veja áreas de risco e receba alertas importantes.
             </p>
 
-            <button className="botao" onClick={proxima}>
+            <button className="botao" onClick={()=>(navigate("/localizacao"))}>
                 Próximo
             </button>
         </main>

@@ -1,7 +1,10 @@
 import { MdCloud, MdLocationOn } from "react-icons/md";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
-export default function Previsao({ proxima }) {
+export default function Previsao() {
+    const navigate = useNavigate();
+
     return (
         <main className="tela">
             <div className="progresso">
@@ -30,7 +33,7 @@ export default function Previsao({ proxima }) {
                 Receba informações sobre chuva e riscos na sua região.
             </p>
 
-            <button className="botao" onClick={proxima}>
+            <button className="botao" onClick={() => navigate("/riscos")}>
                 Próximo
             </button>
         </main>

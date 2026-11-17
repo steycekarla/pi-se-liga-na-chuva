@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Routes, Route } from 'react-router-dom';
 import App from '../pages/App/index.jsx'
 import Cadastro from '../pages/Cadastro/index.jsx';
 import ConfiguracaoLocal from '../pages/ConfiguracaoLocal/index.jsx';
@@ -23,6 +23,7 @@ export default function AppRoutes(){
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/previsao' element={<Previsao/>}/>
                     <Route path='/riscos' element={<Riscos/>}/>
+                    <Route path='*' element={<Navigate to="/" replace/>}/>
                 </Routes>
             </Router>
         </>
