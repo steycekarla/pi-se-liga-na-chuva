@@ -4,10 +4,8 @@ import Cadastro from '../pages/Cadastro/index.jsx';
 import ConfiguracaoLocal from '../pages/ConfiguracaoLocal/index.jsx';
 import Home from '../pages/Home/index.jsx'
 import Inicio from '../pages/Inicio/index.jsx';
-import Localizacao from '../pages/Localizacao/index.jsx';
 import Login from '../pages/Login/index.jsx';
 import Previsao from '../pages/Previsao/index.jsx';
-import Riscos from '../pages/Riscos/index.jsx';
 
 export default function AppRoutes(){
     return (
@@ -19,10 +17,10 @@ export default function AppRoutes(){
                     <Route path='/configuracaolocal' element={<ConfiguracaoLocal/>}/>
                     <Route path='/home' element={<Home />}/>
                     <Route path='/inicio' element={<Inicio/>}/>
-                    <Route path='/localizacao' element={<Localizacao/>}/>
+                    <Route path='/localizacao' element={<Previsao initialSlide={2}/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/previsao' element={<Previsao/>}/>
-                    <Route path='/riscos' element={<Riscos/>}/>
+                    <Route path='/riscos' element={<Previsao initialSlide={1}/>}/>
                     <Route path='*' element={<Navigate to="/" replace/>}/>
                 </Routes>
             </Router>

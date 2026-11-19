@@ -1,22 +1,42 @@
 .tela {
-  padding-top: 52px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 390px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 52px 28px 35px;
+  background: #102044;
+  color: #ffffff;
 }
 
 .tela .progresso {
+  display: flex;
+  gap: 7px;
   margin-bottom: 36px;
 }
 
-.tela .progresso span {
-  display: inline-block;
+.tela .progresso button {
   width: 30px;
   height: 4px;
-  margin-right: 5px;
+  padding: 0;
+  border: 0;
   border-radius: 5px;
   background: #6b7280;
 }
 
-.tela .progresso .ativo {
+.tela .progresso button.ativo {
   background: #ffd000;
+}
+
+.tela .progresso button.concluido {
+  background: #b4a13b;
+}
+
+.carrossel-slide {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .tela .titulo {
@@ -24,7 +44,6 @@
   margin-bottom: 27px;
 }
 
-/* Área do mapa */
 .mapa {
   position: relative;
   width: 100%;
@@ -33,7 +52,6 @@
   margin-top: 0;
 }
 
-/* Mapa */
 .mapa-linhas {
   position: absolute;
   top: 7px;
@@ -41,12 +59,9 @@
   width: 78%;
   height: 125px;
   overflow: hidden;
-
   border: 0;
   border-radius: 8px;
-
   background-color: #06458e;
-
   background-image:
     repeating-linear-gradient(
       35deg,
@@ -60,115 +75,179 @@
     );
 }
 
-/* Círculos do mapa */
-.mapa-linhas::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 55px;
-  height: 55px;
-
-  border: 1px solid #29aaff65;
-  border-radius: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
+.mapa-linhas::before,
 .mapa-linhas::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: 85px;
-  height: 85px;
-
   border: 1px solid #29aaff65;
   border-radius: 50%;
-
   transform: translate(-50%, -50%);
 }
 
-/* Cartão de clima */
+.mapa-linhas::before {
+  width: 55px;
+  height: 55px;
+}
+
+.mapa-linhas::after {
+  width: 85px;
+  height: 85px;
+}
+
 .cartao-clima {
   position: absolute;
   z-index: 2;
-
-  left: 0;
   top: 0;
-
+  left: 0;
+  display: flex;
   width: 100px;
   height: 145px;
-
-  padding: 8px 5px;
-
-  border: 1px solid #2776bd;
-  border-radius: 8px;
-
-  background: #104b8d;
-
-  display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding: 8px 5px;
+  border: 1px solid #2776bd;
+  border-radius: 8px;
+  background: #104b8d;
   color: #ffffff;
 }
 
-/* Ícone da nuvem */
 .nuvem-clima {
   color: #b9e5ff;
   font-size: 29px;
 }
 
-/* Temperatura */
 .cartao-clima strong {
-  color: #ffffff;
+  margin-top: 3px;
   font-size: 23px;
   line-height: 1.1;
-  margin-top: 3px;
 }
 
-/* Texto "Chuva fraca" */
 .cartao-clima small {
+  margin-top: 7px;
   color: #d4e5f8;
   font-size: 7px;
-  margin-top: 7px;
 }
 
-/* Marcador de localização */
 .marcador-mapa {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
   color: #ffd000;
   font-size: 27px;
-
   transform: translate(-50%, -50%);
 }
 
-/* Descrição */
+.alerta-mapa {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 8px;
+  border: 1px solid #315b8d;
+  border-radius: 6px;
+  background: #102044;
+  font-size: 10px;
+}
+
+.alerta-mapa svg {
+  color: #ff3838;
+  font-size: 18px;
+}
+
+.alerta-mapa small {
+  color: #d4e5f8;
+  font-size: 8px;
+}
+
+.alerta-central {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  color: #ff3434;
+  font-size: 34px;
+  transform: translate(-50%, -50%);
+}
+
+.location-art {
+  position: relative;
+  display: flex;
+  width: 190px;
+  height: 190px;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  border: 1px solid #2764a0;
+  border-radius: 50%;
+  background: #103c70;
+}
+
+.location-circle {
+  display: flex;
+  width: 105px;
+  height: 105px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffd21c;
+  color: #14213d;
+  font-size: 65px;
+}
+
+.location-target {
+  position: absolute;
+  right: 5px;
+  bottom: 20px;
+  color: #54c8ff;
+  font-size: 35px;
+}
+
 .tela .descricao {
   margin-top: 12px;
   margin-bottom: 20px;
+  color: #e0e7f5;
+}
+
+.carrossel-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
 }
 
 .tela .botao {
-  margin-top: auto;
-
   padding: 10px 20px;
-
   border: none;
   border-radius: 6px;
-
   background: #ffd000;
   color: #12244d;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
+}
+
+.tela .botao-voltar {
+  border: 1px solid #ffd000;
+  background: transparent;
+  color: #ffd000;
+}
+
+.botao-ignorar {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #e0e7f5;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .tela {
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
 }
